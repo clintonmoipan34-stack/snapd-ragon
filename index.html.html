@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snapdragon Tool Rental</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #0b132b;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+  }
+
+  /* TOP ROTATING TEXT */
+  .welcome-banner {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+  }
+  .welcome-banner span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: moveBanner 15s linear infinite, colorChange 6s linear infinite;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  @keyframes moveBanner {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  @keyframes colorChange {
+    0% { color: #00ffcc; }
+    25% { color: #ffcc00; }
+    50% { color: #00ff66; }
+    75% { color: #ff6699; }
+    100% { color: #00ffcc; }
+  }
+
+  .login-box, .main {
+    background: #1c2541;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  h1, h2 {
+    color: #5bc0be;
+  }
+
+  input[type="password"] {
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 15px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background: #5bc0be;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  button:hover {
+    background: #3aafa9;
+  }
+
+  .tool {
+    background: #3a506b;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+  }
+
+  .footer {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #ccc;
+  }
+
+  .payments {
+    margin-top: 25px;
+    background: #3a506b;
+    border-radius: 10px;
+    padding: 15px;
+  }
+
+  .payments h3 {
+    color: #5bc0be;
+  }
+
+  .payments p {
+    margin: 5px 0;
+    font-weight: bold;
+  }
+
+  /* Responsive design for mobile */
+  @media (max-width: 600px) {
+    body {
+      padding: 15px;
+    }
+    .login-box, .main {
+      max-width: 95%;
+    }
+    .welcome-banner span {
+      font-size: 18px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP ROTATING TEXT -->
+<div class="welcome-banner">
+  <span>🤗 YOU ARE WELCOME 🤗 — 💬 MDM FILES COMING SOON 💬 — SNAPDRAGON FLASHING TOOL RENTAL 💥</span>
+</div>
+
+<!-- LOGIN PAGE -->
+<div class="login-box" id="loginPage">
+  <h1>Type 1111 to confirm you are not a robot</h1>
+  <input type="password" id="password" placeholder="Enter 1111">
+  <br>
+  <button onclick="checkPassword()">Enter</button>
+</div>
+
+<!-- MAIN PAGE -->
+<div class="main" id="mainPage" style="display:none;">
+  <h2>Welcome to Snapdragon Flashing Tool Rental Services</h2>
+
+  <div class="tool">1. Unlock Tool — 6hrs @ $2<br>
+    <button onclick="openTelegram()">Add to Cart</button></div>
+  <div class="tool">2. Android Multi Tool — 3hrs @ $1<br>
+    <button onclick="openTelegram()">Add to Cart</button></div>
+  <div class="tool">3. TSM Tool — 6hrs @ $2<br>
+    <button onclick="openTelegram()">Add to Cart</button></div>
+  <div class="tool">4. UAT Tool — 6hrs @ $3<br>
+    <button onclick="openTelegram()">Add to Cart</button></div>
+  <div class="tool">5. TFM Tool — 3hrs @ $2<br>
+    <button onclick="openTelegram()">Add to Cart</button></div>
+  <div class="tool">6. Android Win Tool — 48hrs @ $3<br>
+    <button onclick="openTelegram()">Add to Cart</button></div>
+  <div class="tool">7. Pandora Digital Tool — 48hrs @ $12<br>
+    <button onclick="openTelegram()">Add to Cart</button></div>
+  <div class="tool">8. DFT Tool — 48hrs @ $5<br>
+    <button onclick="openTelegram()">Add to Cart</button></div>
+  <div class="tool">9. Hydra Tool — 24hrs @ $3<br>
+    <button onclick="openTelegram()">Add to Cart</button></div>
+  <div class="tool">10. Anonyshu Tool — 12hrs @ $3<br>
+    <button onclick="openTelegram()">Add to Cart</button></div>
+
+  <div class="payments">
+    <h3>💳 Payment Methods Supported</h3>
+    <p>1️ Binance</p>
+    <p>2️ M-Pesa</p>
+    <p>3️ Airtel Money</p>
+    <p>4️ PayPal</p>
+    <p>5️ Bitcoin</p>
+  </div>
+
+  <div class="footer">
+    <p>Follow me on Facebook: <b>@multi.cm</b></p>
+    <p>WhatsApp: <b>+254740559604</b></p>
+    <p>All Digital Tool Activations Available</p>
+  </div>
+</div>
+
+<script>
+  function checkPassword() {
+    var pass = document.getElementById("password").value;
+    if (pass === "1111") {
+      document.getElementById("loginPage").style.display = "none";
+      document.getElementById("mainPage").style.display = "block";
+    } else {
+      alert("❌ Incorrect password! Try again.");
+    }
+  }
+
+  function openTelegram() {
+    window.location.href = "https://t.me/CHIMERA_CM";
+  }
+</script>
+
+</body>
+</html>
